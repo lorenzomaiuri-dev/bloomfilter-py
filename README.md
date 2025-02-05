@@ -1,6 +1,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![PyPI version][pypi-shield]][pypi-url]
 
 # Bloom Filter in Python
 
@@ -31,18 +32,15 @@ To check if an element is present:
 - If all bits at those positions are 1, the element **may be present** (with a certain probability of false positives).
 - If at least one bit is 0, the element is **definitely not present**.
 
-### Mathematical Formulas
+## Mathematical Formulas
 
-- **Optimal bit array size:**
-  \[
-  m = - \frac{n \log p}{(\log 2)^2}
-  \]
-  where `n` is the number of expected elements and `p` is the false positive rate.
+- **Optimal bit array size**:  
+  $$m = - \frac{n \log p}{(\log 2)^2}$$  
+  where \( n \) is the number of expected elements and \( p \) is the false positive rate.
 
-- **Optimal number of hash functions:**
-  \[
-  k = \frac{m}{n} \log 2
-  \]
+- **Optimal number of hash functions**:  
+  $$k = \frac{m}{n} \log 2$$  
+
 
 ## Installation
 
@@ -141,3 +139,5 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 [license-url]: https://opensource.org/licenses/MIT
 [linkedin-shield]: https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin&logoColor=white
 [linkedin-url]: https://www.linkedin.com/in/maiurilorenzo
+[pypi-shield]: https://img.shields.io/pypi/v/bloomfilter-lite
+[pypi-url]: https://pypi.org/project/bloomfilter-lite/
