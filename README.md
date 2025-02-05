@@ -3,6 +3,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![PyPI version][pypi-shield]][pypi-url]
 [![Coverage][coverage-shield]][coverage-url]
+[![Workflow Status][workflow-shield]][workflow-url]
 
 # Bloom Filter in Python
 
@@ -144,3 +145,5 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 [pypi-url]: https://pypi.org/project/bloomfilter-lite/
 [coverage-shield]: https://codecov.io/gh/lorenzomaiuri-dev/bloomfilter-py/branch/main/graph/badge.svg
 [coverage-url]: https://codecov.io/gh/lorenzomaiuri-dev/bloomfilter-py
+[workflow-shield]: https://github.com/lorenzomaiuri-dev/bloomfilter-py/actions/workflows/publish.yml/badge.svg
+[workflow-url]: https://github.com/lorenzomaiuri-dev/bloomfilter-py/actions
