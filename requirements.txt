@@ -1,3 +1,3 @@
 bitarray==3.0.0
--e git+https://github.com/lorenzomaiuri-dev/bloomfilter-py.git#egg=bloomfilter_lite
+bloomfilter-lite
 pytest==8.3.4
