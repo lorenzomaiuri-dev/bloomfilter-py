@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="bloomfilter",
+    name="bloomfilter-py",
     version="1.0.0",
     author="Lorenzo maiuri",
     author_email="maiurilorenzo@gmail.com",

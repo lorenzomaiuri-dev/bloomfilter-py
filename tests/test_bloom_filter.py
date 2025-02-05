@@ -1,5 +1,5 @@
 import pytest
-from bloomfilter import BloomFilter
+from bloomfilter_py import BloomFilter
 
 @pytest.fixture
 def bloom_filter():

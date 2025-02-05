@@ -1,5 +1,5 @@
 import time
-from bloomfilter import BloomFilter
+from bloomfilter_py import BloomFilter
 
 def run_benchmark(num_elements, false_positive_rate):
     print(f"Running benchmark for {num_elements} elements with {false_positive_rate * 100}% false positive rate")

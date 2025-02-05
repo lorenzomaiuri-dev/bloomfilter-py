@@ -26,6 +26,7 @@ This implementation is optimized for configurability and performance, allowing u
 A Bloom Filter consists of a **bit array** of size `m` and uses `k` different hash functions. When an element is inserted, all `k` hash functions generate indices in the bit array, and the corresponding bits are set to 1.
 
 To check if an element is present:
+
 - Compute its `k` hash values.
 - If all bits at those positions are 1, the element **may be present** (with a certain probability of false positives).
 - If at least one bit is 0, the element is **definitely not present**.
