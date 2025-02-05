@@ -27,8 +27,17 @@ jobs:
           pip install pytest bitarray
           pip install -e .  # Install the package in editable mode
 
-      - name: Run Tests
-        run: pytest tests/
+      - name: Run Tests with Coverage
+        run: |
+          coverage run -m pytest tests/
+          coverage report
+          coverage xml
+        
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}  # Get this from https://app.codecov.io
+          file: coverage.xml
 
   deploy:
     needs: test  # Deploy only if tests pass
