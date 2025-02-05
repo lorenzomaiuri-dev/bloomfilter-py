@@ -1,13 +1,38 @@
-name: Publish to PyPI
+name: CI/CD Pipeline
 
 on:
   push:
     tags:
       - "v*.*.*"  # Run when a new version tag is pushed
+  pull_request:  # Run on PRs to validate tests before merging
+    branches:
+      - main
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest bitarray  # Add dependencies
+
+      - name: Run Tests
+        run: pytest tests/
+
+  deploy:
+    needs: test  # Deploy only if tests pass
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
 
     steps:
       - name: Checkout repository

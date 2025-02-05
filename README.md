@@ -49,7 +49,7 @@ To check if an element is present:
 To install the Bloom Filter package, run:
 
 ```sh
-pip install bloomfilter-py
+pip install bloomfilter-lite
 ```
 
 ### Installation from source
@@ -76,7 +76,7 @@ pip install bloomfilter-py
 ### Basic Example
 
 ```python
-from bloomfilter import BloomFilter
+from bloomfilter_lite import BloomFilter
 
 # Create a Bloom Filter for 1000 expected elements with a 1% false positive rate
 bf = BloomFilter(expected_items=1000, false_positive_rate=0.01)
