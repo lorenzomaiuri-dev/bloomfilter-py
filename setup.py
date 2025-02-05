@@ -1,12 +1,8 @@
-import subprocess
 from setuptools import setup, find_packages
-
-def get_version():
-    return subprocess.check_output(["git", "describe", "--tags", "--abbrev=0"]).decode("utf-8").strip()
 
 setup(
     name="bloomfilter-lite",
-    version=get_version(),
+    version="1.0.7",
     author="Lorenzo maiuri",
     author_email="maiurilorenzo@gmail.com",
     description="A space-efficient probabilistic data structure for membership testing.",
